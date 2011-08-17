@@ -3,6 +3,8 @@
 	<head>
 		<title><%= title%></title>
 		<%= csrf_meta_tag %>
+		<%= stylesheet_link_tag 'bluepoint/screen',:media => 'screen' %>
+		<%= stylesheet_link_tag 'bluepoint/print',:media => 'print' %>
 	</head>
 	<body>
 		<%=yield%>
