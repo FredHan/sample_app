@@ -6,29 +6,15 @@
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<%= csrf_meta_tag %>
-		<%= stylesheet_link_tag 'bluepoint/screen',:media => 'screen' %>
-		<%= stylesheet_link_tag 'bluepoint/print',:media => 'print' %>
-		<!--if It IE 8>
-		<%= stylesheet_link_tag 'blueprint/ie'%>
-		<![endif]-->
+		<%= render 'layouts/stylesheets'%>
 	</head>
 	<body>
 		<div class="container">
-			<header>
-				<%= image_tag("logo.png",:alt => "Sample App",:class=>"round")%>
-				<nav class="round">
-					<ul>
-						<li><%= link_to "Home",'#' %></li>
-						<li><%= link_to "Help",'#' %></li>
-						<li><%= link_to "Sign in",'#' %></li>
-						<li><%= link_to "Home",'#' %></li>
-						
-					</ul>
-				</nav>
-			</header>
+			<%= render 'layouts/header'%>
 			<section class="round">
 			<%=yield%>	
 			</section>
+			<%= render 'layouts/footer'%>
 		</div>
 	</body>
 </html>
