@@ -43,5 +43,7 @@ describe PagesController do
                           :content => "#{@base_tile} | About")
       end
   end
+  
+  
 
 end
