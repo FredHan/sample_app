@@ -8,4 +8,8 @@ module ApplicationHelper
       "#{base_title} | #{@title}"
     end 
   end
+  
+  def logo
+    image_tag("logo.gif",:alt => "Sample App",:class=>"round")
+  end
 end
